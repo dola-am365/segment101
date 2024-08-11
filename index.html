@@ -1,150 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="shortcut icon" href="logo.jpeg" type="image/x-icon">
-<title>segment 101</title>
-<!-- Add FontAwesome library -->
-<link id="fav" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-<style>
-  body {
-    font-family: Arial, sans-serif;
-    text-align: center;
-    background-color: rgb(32, 32, 32);
-    margin: 0;
-    padding: 0;
-  }
-  #fav{
-    border-radius: 3rem;
-  }
-
-  #construction-text {
-    font-size: 30px;
-    margin-top: 9rem;
-    opacity: 1;
-    transition: opacity 0.5s ease-in-out;
-    color:  #F3BC6Aff;
-  }
-
-  #language-button {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    background: none;
-    border: none;
-    cursor: pointer;
-  }
-  button{
-    margin-right: 5rem;
-    margin-top: 2rem;
-  }
-
-  .hidden {
-    opacity: 0;
-  }
-  #logo{
-    border-radius: 20rem;
-    width: 10%;
-    margin-top: 1rem;
-    margin-bottom: -5rem;
-  }
-  
-  footer {
-    background-color: #333;
-    color: #fff;
-    padding: 20px 0;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    left: 0;
-  }
-
-  .contact-info {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .contact-info a {
-    color: #fff;
-    text-decoration: none;
-    margin: 0 20px;
-  }
-  p{
-    width: 39rem;
-    margin-left: 20rem;
-  }
-  #phone{
-    font-size: 14px;
-  }
-  
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Segment 101 Portfolio</title>
+    <link rel="stylesheet" href="css.css">
+  <link rel="icon" type="image/x-icon" href="logo.png">
 </head>
 <body>
-  <div id="nav">
-    <img id="logo" src="logo.jpeg" alt="">
-  </div>
+    <header>
+        <div class="logo">
+            <img src="logo.png" alt="Segment 101 Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#rating">Customer Rating</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
 
-<p id="construction-text">thank you for visiting our website but its still under construction you can contact us from the ontact information at the bottom of the page</p>
+    <section id="home" class="section">
+        <h2>Home</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    </section>
 
-<button id="language-button" onclick="toggleLanguage()">
-  <i class="fas fa-language" style="color:  #F3BC6Aff; font-size:3rem ;"></i>
-</button>
+    <section id="services" class="section">
+        <h2>Services</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    </section>
 
-<footer>
-  <div class="contact-info">
-    <a href="mailto:hr@segment101.com"><i class="far fa-envelope"></i> hr@segment101.com</a>
-    <a id="phone" href="tel:+905510839150"><i class="fas fa-phone"></i>+90 551 083 91 50</a>
-    <a target="_blank" href="https://www.facebook.com/profile.php?id=61558424951484"><i class="fab fa-facebook-f"></i></a>
-    <a target="_blank" href="https://www.linkedin.com/in/mohamed-adel-1a2428304/"><i class="fab fa-linkedin"></i>
-    </a>
-  </div>
-</footer>
+    <section id="about" class="section">
+        <h2>About Us</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    </section>
 
-<script>
-  const constructionText = document.getElementById('construction-text');
-  let currentLanguage = 'en';
+    <section id="rating" class="section">
+        <h2>Customer Rating</h2>
+        <div class="rating">★★★★☆</div>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    </section>
 
-  function toggleLanguage() {
-    switch (currentLanguage) {
-      case 'en':
-        currentLanguage =  'ar';
-        break;
-      case 'ar':
-        currentLanguage = 'tr';
-        break;
-      case 'tr':
-        currentLanguage = 'en';
-        break;
-      default:
-        currentLanguage = 'en';
-    }
-    updateText();
-  }
+    <section id="contact" class="contact-section">
+        <div class="contact-left">
+            <h2>Contact Us</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+        <div class="contact-right">
+            <form action="https://your-form-handler-url.com" method="POST">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
 
-  function updateText() {
-    // Apply fade-out effect
-    constructionText.classList.add('hidden');
-    // Wait for the fade-out transition to complete
-    setTimeout(() => {
-      switch (currentLanguage) {
-        case 'en':
-          constructionText.textContent = 'thank you for visiting our website but its still under construction you can contact us from the ontact information at the bottom of the page';
-          break;
-        case 'ar':
-          constructionText.textContent = 'شكرًا لك على زيارة موقعنا الإلكتروني ولكنه لا يزال قيد الإنشاء، يمكنك الاتصال بنا من خلال معلومات الاتصال الموجودة أسفل الصفحة';
-          break;
-        case 'tr':
-          constructionText.textContent = 'Web sitemizi ziyaret ettiğiniz için teşekkür ederiz ancak henüz yapım aşamasındadır. Sayfanın altındaki iletişim bilgilerinden bize ulaşabilirsiniz.';
-          break;
-        default:
-          constructionText.textContent = 'thank you for visiting our website but its still under construction you can contact us from the ontact information at the bottom of the page';
-      }
-      // Apply fade-in effect
-      constructionText.classList.remove('hidden');
-    }, 500); // Set timeout to match the transition duration
-  }
-</script>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="role">Are you a customer or looking for a job?</label>
+                <select id="role" name="role">
+                    <option value="customer">Customer</option>
+                    <option value="job-seeker">Job Seeker</option>
+                </select>
+
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 Segment 101. All rights reserved.</p>
+            <div class="social-media">
+                <a href="#">Facebook</a>
+                <a href="#">Twitter</a>
+                <a href="#">Instagram</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp Bubble -->
+    <div class="whatsapp-bubble">
+        <a href="https://wa.me/905510839150" target="_blank" aria-label="Chat with us on WhatsApp">
+            <img src="whatsapp-icon.png" alt="WhatsApp Icon">
+        </a>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>

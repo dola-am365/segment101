@@ -1,0 +1,198 @@
+:root {
+    /* HEX */
+    --coyote: #847557;
+    --black: #000000;
+    --black-2: #020101;
+    --black-olive: #423D32;
+    --silver: #B7B7B7;
+
+    /* HSL */
+    --coyote-hsl: hsla(40, 21%, 43%, 1);
+    --black-hsl: hsla(0, 0%, 0%, 1);
+    --black-2-hsl: hsla(0, 33%, 1%, 1);
+    --black-olive-hsl: hsla(41, 14%, 23%, 1);
+    --silver-hsl: hsla(0, 0%, 72%, 1);
+
+    /* Gradient */
+    --gradient-radial: radial-gradient(var(--coyote), var(--black), var(--black-2), var(--black-olive), var(--silver));
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: var(--gradient-radial);
+    color: var(--silver);
+    scroll-behavior: smooth;
+}
+
+header {
+    background-color: var(--black);
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000; /* Ensure it stays on top of other content */
+}
+
+.logo img {
+    height: 50px;
+    margin-right: 3rem;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 1rem;
+}
+
+nav ul li {
+    margin: 0;
+}
+
+nav ul li a {
+    color: var(--silver);
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: var(--coyote);
+}
+
+.section {
+    padding: 4rem 2rem;
+    text-align: left;
+    background-color: var(--black-olive);
+    color: var(--silver);
+    margin-bottom: 1rem;
+}
+
+.section h2 {
+    margin-bottom: 1.5rem;
+    color: var(--coyote);
+}
+
+.rating {
+    font-size: 1.5rem;
+    color: var(--coyote);
+}
+
+.contact-section {
+    display: flex;
+    justify-content: space-between;
+    padding: 4rem 2rem;
+    background-color: var(--black);
+    color: var(--silver);
+    margin-bottom: 1rem;
+}
+
+.contact-left {
+    flex: 1;
+    padding: 1rem;
+}
+
+.contact-right {
+    flex: 1;
+    padding: 1rem;
+    background-color: var(--black-2);
+    border-radius: 8px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form label {
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    color: var(--coyote);
+}
+
+form input, form select, form button {
+    margin-bottom: 1rem;
+    padding: 0.75rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 4px;
+}
+
+form input, form select {
+    background-color: var(--black-olive);
+    color: var(--silver);
+}
+
+form button {
+    background-color: var(--coyote);
+    color: var(--black);
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background-color: #6a5d3f;
+}
+
+footer {
+    background-color: var(--black-2);
+    color: var(--silver);
+    padding: 2rem;
+    text-align: center;
+}
+
+.footer-content {
+    margin-bottom: 1rem;
+}
+
+.social-media a {
+    color: var(--coyote);
+    text-decoration: none;
+    margin: 0 1rem;
+    transition: color 0.3s ease;
+}
+
+.social-media a:hover {
+    color: var(--silver);
+}
+
+/* Floating WhatsApp Bubble */
+.whatsapp-bubble {
+    position: fixed;
+    bottom: 20px; /* Adjust as needed */
+    left: 20px; /* Adjust as needed */
+    background-color: var(--coyote); /* Gold color for bubble */
+    border-radius: 50%;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    z-index: 1000; /* Ensure it stays on top of other content */
+    transition: background-color 0.3s ease;
+}
+
+.whatsapp-bubble a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--black);
+    text-decoration: none;
+}
+
+.whatsapp-bubble img {
+    width: 50px; /* Adjust size as needed */
+    height: auto;
+}
+
+.whatsapp-bubble:hover {
+    background-color: var(--black); /* Black color on hover */
+}
+
+.whatsapp-bubble:hover img {
+    filter: brightness(1) invert(1); /* Inverts the icon color on hover */
+}
