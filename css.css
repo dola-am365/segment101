@@ -411,14 +411,51 @@ a{
         align-items: center; /* Center align the elements */
     }
 
-    .contact-info, .contact-form {
+    .contact-info {
         width: 100%; /* Take full width */
-        margin-left: 0; /* Remove left margin from the contact info */
+        margin-left: 0; /* Remove left margin */
+    }
+
+      .contact-info, .contact-form {
+        width: 100%; /* Take full width of the container */
+        margin-left: 0; /* Reset any left margin */
+        text-align: center; /* Center align the text */
     }
 
     .contact-form iframe {
-        width: 100%; /* Make the iframe take full width */
-        height: auto; /* Adjust the height automatically */
-        margin-left: 0; /* Remove left margin from the iframe */
+        width: 100%; /* Make iframe take full width */
+        margin: 0; /* Remove any margin */
     }
 }
+}
+.contact-left,
+.contact-right {
+    width: 48%; /* Adjust as needed */
+}
+
+.contact-left {
+    margin-right: 2%; /* Adds space between the divs */
+
+}
+.contact-left p, h1{
+    margin-left: 5rem;
+}
+.contact-right {
+    margin-left: 2%; /* Adds space between the divs */
+}
+.contact-right iframe{
+    margin-right: 5rem; /* Adds space between the divs */
+}
+.contact-left, .contact-right {
+    float: left; /* Places the divs side by side */
+}
+
+@media (max-width: 768px) {
+    .contact-left,
+    .contact-right {
+        width: 100%; /* Full width on smaller screens */
+        float: none; /* Stacks them vertically */
+        margin: 0 0 20px 0; /* Adjusts margin for better spacing */
+    }
+}
+
