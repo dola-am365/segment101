@@ -3,89 +3,112 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Segment 101 Portfolio</title>
+    <title data-translate="pageTitle">Segment 101</title>
     <link rel="stylesheet" href="css.css">
-  <link rel="icon" type="image/x-icon" href="logo.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="icon" type="image/x-icon" href="logo.png">
 </head>
 <body>
     <header>
         <div class="logo">
-            <img src="logo.png" alt="Segment 101 Logo">
+            <img class="logo" src="logo.png" alt="Segment 101 Logo">
         </div>
         <nav>
             <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#about">About Us</a></li>
-                <li><a href="#rating">Customer Rating</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#about" data-translate="aboutLink">About</a></li>
+                <li><a href="#Services" data-translate="servicesLink">Services</a></li>
+                <li><a href="#contact" data-translate="contactLink">Contact</a></li>
             </ul>
         </nav>
+        <div class="language">
+            <a href="#" data-lang="EN" data-translate="englishLink">EN</a>
+            <a href="#" data-lang="AR" data-translate="arabicLink">AR</a>
+        </div>
     </header>
+    <main>
+        <section class="hero">
+            <h1 data-translate="heroTitle">Customers</h1>
+            <div class="carousel-container">
+                <div class="carousel">
+                    <div class="carousel-item" data-translate="testimonial1">"Great service, will definitely come back!"</div>
+                    <div class="carousel-item" data-translate="testimonial2">"Amazing experience, highly recommend!"</div>
+                    <div class="carousel-item" data-translate="testimonial3">"The best customer support I've ever had."</div>
+                </div>
+            </div>
+            <button><a class="c" href="https://wa.me/905510839150" data-translate="getInTouch">Get in Touch</a></button>
+        </section>
 
-    <section id="home" class="section">
-        <h2>Home</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-    </section>
-
-    <section id="services" class="section">
-        <h2>Services</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-    </section>
-
-    <section id="about" class="section">
-        <h2>About Us</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-    </section>
-
-    <section id="rating" class="section">
-        <h2>Customer Rating</h2>
-        <div class="rating">★★★★☆</div>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-    </section>
-
-    <section id="contact" class="contact-section">
-        <div class="contact-left">
-            <h2>Contact Us</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <div class="serv">
+            <h2 id="Services" data-translate="servicesTitle">Services</h2>
+            <div class="card-container">
+                <div class="card">
+                    <img src="bg.png" alt="Card Image">
+                    <div class="card__content">
+                        <p class="card__title" data-translate="recruitmentTitle">Recruitment</p>
+                        <p class="card__description" data-translate="recruitmentDesc">We connect you with top talent that fits your company’s needs and culture. From screening to placement, we handle the hiring process to ensure a smooth and efficient experience.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="bg.png" alt="Card Image">
+                    <div class="card__content">
+                        <p class="card__title" data-translate="trainingTitle">Training</p>
+                        <p class="card__description" data-translate="trainingDesc">Our tailored training programs develop your team’s skills, addressing specific challenges to boost productivity and drive success. We focus on upskilling and onboarding to meet your goals.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="bg.png" alt="Card Image">
+                    <div class="card__content">
+                        <p class="card__title" data-translate="hrSetupTitle">HR Department Setup</p>
+                        <p class="card__description" data-translate="hrSetupDesc">We help you build your HR department from the ground up. From creating policies to setting up systems, we provide comprehensive support to establish an effective HR function tailored to your business needs.</p>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="contact-right">
-            <form action="https://your-form-handler-url.com" method="POST">
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required>
-
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-
-                <label for="role">Are you a customer or looking for a job?</label>
-                <select id="role" name="role">
-                    <option value="customer">Customer</option>
-                    <option value="job-seeker">Job Seeker</option>
-                </select>
-
-                <button type="submit">Submit</button>
-            </form>
-        </div>
-    </section>
-
+        <section class="content">
+            <div class="left">
+                <img id="" src="bg.png" alt="About Us Image">
+            </div>
+            <div class="right">
+                <h2 id="about" data-translate="aboutTitle">About Us</h2>
+                <p data-translate="aboutDesc">Segment 101 is a dynamic startup specializing in recruitment and training services. We are dedicated to helping businesses find top talent and equipping them with the skills they need to succeed. Our approach is tailored to meet the unique needs of each client, ensuring effective and efficient solutions. At Segment 101, we believe in building strong partnerships to drive growth and success for all our stakeholders.</p>
+            </div>
+        </section>
+        <section id="contact" class="call-to-action">
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h1 data-translate="contactTitle">Contact Us</h1>
+                    <p data-translate="contactEmail">Email: hr@segment.com</p>
+                    <p data-translate="contactPhone">Phone: +90 551 083 91 50</p>
+                </div>
+                <div class="contact-form">
+                    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfrYyTC5NhhWuJ6Ddo9vmPFBKdqo8s2dO6oNIbQPaH93bP6yw/viewform?embedded=true" width="500" height="350" style="margin-left: 15rem; overflow: hidden;" frameborder="0">Loading…</iframe>
+                </div>
+            </div>
+        </section>
+    </main>
     <footer>
         <div class="footer-content">
             <p>&copy; 2024 Segment 101. All rights reserved.</p>
-            <div class="social-media">
-                <a href="#">Facebook</a>
-                <a href="#">Twitter</a>
-                <a href="#">Instagram</a>
+            <div class="footer-icons">
+                <a href="https://t.me/+qDHeNBT5IPxlNzQ0" target="_blank"><i class="fab fa-telegram-plane"></i></a>
+                <a href="https://www.facebook.com/profile.php?id=61558424951484" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.linkedin.com/in/yourlinkedin" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                <a href="tel:+905510839150"><i class="fas fa-phone-alt"></i></a>
+                <a href="mailto:hr@segment101.com"><i class="fas fa-envelope"></i></a>
             </div>
         </div>
     </footer>
 
-    <!-- Floating WhatsApp Bubble -->
-    <div class="whatsapp-bubble">
-        <a href="https://wa.me/905510839150" target="_blank" aria-label="Chat with us on WhatsApp">
-            <img src="whatsapp-icon.png" alt="WhatsApp Icon">
-        </a>
+    <!-- WhatsApp Bubble -->
+    <a href="https://wa.me/905510839150" class="whatsapp-bubble" target="_blank">
+        <img src="whatsapp-icon.png" alt="WhatsApp">
+    </a>
+
+    <!-- Scroll-to-Top Arrow -->
+    <div class="scroll-to-top" id="scrollToTop">
+        &#8679; <!-- This is the arrow symbol -->
     </div>
 
-    <script src="script.js"></script>
+    <script src="js.js"></script>
 </body>
 </html>
